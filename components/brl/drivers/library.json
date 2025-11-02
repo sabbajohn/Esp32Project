@@ -1,0 +1,22 @@
+{
+    "name": "drivers",
+    "version": "1.0.0",
+    "description": "Hardware Drivers for ESP32 Mini-OS",
+    "keywords": "esp32, drivers, hardware",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yourusername/esp32-mini-os.git"
+    },
+    "authors": [
+        {
+            "name": "Your Name",
+            "email": "your.email@example.com"
+        }
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "brl": "*"
+    },
+    "frameworks": "espidf",
+    "platforms": "espressif32"
+}
