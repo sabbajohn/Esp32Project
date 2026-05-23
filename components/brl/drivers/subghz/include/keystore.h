@@ -2,7 +2,12 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+#include <stddef.h>
 #include "environment.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 // Tipo de armazenamento de chave
 typedef enum {
@@ -31,3 +36,7 @@ bool subghz_keystore_save_to_file(const char* filename);
 // Funções de manipulação de chaves
 bool subghz_keystore_encrypt_key(SubGhzKey* key, const uint8_t* password, size_t password_length);
 bool subghz_keystore_decrypt_key(SubGhzKey* key, const uint8_t* password, size_t password_length);
+
+#ifdef __cplusplus
+}
+#endif

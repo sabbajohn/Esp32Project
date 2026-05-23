@@ -4,6 +4,10 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 // Estados do transmissor
 typedef enum {
     SubGhzTxStateIdle,
@@ -43,3 +47,7 @@ bool subghz_tx_init(const SubGhzTxConfig* config);
 bool subghz_tx_start(const SubGhzTxData* data, const SubGhzTxCallbacks* callbacks, void* context);
 void subghz_tx_stop(void);
 SubGhzTxState subghz_tx_get_state(void);
+
+#ifdef __cplusplus
+}
+#endif

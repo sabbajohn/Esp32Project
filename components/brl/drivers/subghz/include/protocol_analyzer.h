@@ -1,8 +1,13 @@
 #pragma once
 
-#include "protocols/base.h"
+#include "../protocols/base.h"
 #include <stdint.h>
 #include <stdbool.h>
+#include <stddef.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 // Estruturas para análise de protocolo
 typedef struct {
@@ -45,3 +50,7 @@ typedef struct {
 
 bool subghz_is_frequency_allowed(uint32_t frequency);
 bool subghz_is_power_allowed(uint32_t power_dbm);
+
+#ifdef __cplusplus
+}
+#endif

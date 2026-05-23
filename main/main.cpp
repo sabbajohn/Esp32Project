@@ -7,8 +7,8 @@
 
 static const char* TAG = "Main";
 
-// Declaração prévia da task GUI (será implementada no componente GUI)
-void gui_task(void* arg);
+// Declaração prévia da task GUI (implementada no componente GUI)
+extern "C" void gui_task(void* arg);
 
 extern "C" void app_main() {
     // Inicialização do sistema

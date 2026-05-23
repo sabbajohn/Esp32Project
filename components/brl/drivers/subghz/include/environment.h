@@ -2,6 +2,11 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+#include <stddef.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 // Tipos de modulação suportados
 typedef enum {
@@ -36,3 +41,7 @@ bool subghz_environment_init(SubGhzEnvironment* env);
 bool subghz_environment_set_preset(SubGhzEnvironment* env, SubGhzPreset preset);
 bool subghz_environment_load_custom(SubGhzEnvironment* env, const uint8_t* config, size_t size);
 bool subghz_environment_check_frequency(uint32_t frequency);
+
+#ifdef __cplusplus
+}
+#endif

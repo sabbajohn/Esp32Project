@@ -1,0 +1,2 @@
+/usr/bin/ar qc librf_record.a CMakeFiles/rf_record.dir/Users/johnsabba/Projects/Hacking/AnaliseDeVulnerabilidadeRF/Esp32Project/core/record/src/record.c.o CMakeFiles/rf_record.dir/Users/johnsabba/Projects/Hacking/AnaliseDeVulnerabilidadeRF/Esp32Project/core/record/src/codec.c.o
+/usr/bin/ranlib librf_record.a

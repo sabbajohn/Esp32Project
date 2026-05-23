@@ -1,0 +1,8 @@
+/Users/johnsabba/Projects/Hacking/AnaliseDeVulnerabilidadeRF/Esp32Project/mvp/build_hacking/CMakeFiles/subghz_core.dir
+/Users/johnsabba/Projects/Hacking/AnaliseDeVulnerabilidadeRF/Esp32Project/mvp/build_hacking/CMakeFiles/rf_record.dir
+/Users/johnsabba/Projects/Hacking/AnaliseDeVulnerabilidadeRF/Esp32Project/mvp/build_hacking/CMakeFiles/subghz_legacy_bridge.dir
+/Users/johnsabba/Projects/Hacking/AnaliseDeVulnerabilidadeRF/Esp32Project/mvp/build_hacking/CMakeFiles/rf_platform_linux.dir
+/Users/johnsabba/Projects/Hacking/AnaliseDeVulnerabilidadeRF/Esp32Project/mvp/build_hacking/CMakeFiles/rf_firmware_cli.dir
+/Users/johnsabba/Projects/Hacking/AnaliseDeVulnerabilidadeRF/Esp32Project/mvp/build_hacking/CMakeFiles/rf_client.dir
+/Users/johnsabba/Projects/Hacking/AnaliseDeVulnerabilidadeRF/Esp32Project/mvp/build_hacking/CMakeFiles/edit_cache.dir
+/Users/johnsabba/Projects/Hacking/AnaliseDeVulnerabilidadeRF/Esp32Project/mvp/build_hacking/CMakeFiles/rebuild_cache.dir

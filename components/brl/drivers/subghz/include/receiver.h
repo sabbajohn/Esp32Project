@@ -4,6 +4,10 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 // Estados do receptor
 typedef enum {
     SubGhzRxStateIdle,
@@ -44,3 +48,7 @@ bool subghz_rx_init(const SubGhzRxConfig* config);
 bool subghz_rx_start(const SubGhzRxCallbacks* callbacks, void* context);
 void subghz_rx_stop(void);
 SubGhzRxState subghz_rx_get_state(void);
+
+#ifdef __cplusplus
+}
+#endif

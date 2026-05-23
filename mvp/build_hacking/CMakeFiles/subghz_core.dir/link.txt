@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsubghz_core.a CMakeFiles/subghz_core.dir/Users/johnsabba/Projects/Hacking/AnaliseDeVulnerabilidadeRF/Esp32Project/core/subghz_core/src/detector.c.o
+/usr/bin/ranlib libsubghz_core.a

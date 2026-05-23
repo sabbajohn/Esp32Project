@@ -1,0 +1,63 @@
+# Catálogo de Protocolos Portados
+
+Os protocolos abaixo estão portados no espelho fiel:
+- Origem: `components/brl/drivers/subghz/protocols`
+- Destino: `core/subghz_legacy/protocols`
+
+## Lista
+- alutech_at_4n
+- ansonic
+- base
+- bett
+- bin_raw
+- came
+- came_atomo
+- came_twee
+- chamberlain_code
+- clemsa
+- dickert_mahs
+- doitrand
+- dooya
+- faac_slh
+- feron
+- gangqi
+- gate_tx
+- hay21
+- hollarm
+- holtek
+- holtek_ht12x
+- honeywell
+- honeywell_wdb
+- hormann
+- ido
+- intertechno_v3
+- keeloq
+- keeloq_common
+- kia
+- kinggates_stylo_4k
+- legrand
+- linear
+- linear_delta3
+- magellan
+- marantec
+- marantec24
+- mastercode
+- megacode
+- nero_radio
+- nero_sketch
+- nice_flo
+- nice_flor_s
+- phoenix_v2
+- power_smart
+- princeton
+- protocol_items
+- raw
+- revers_rb2
+- roger
+- scher_khan
+- secplus_v1
+- secplus_v2
+- smc5326
+- somfy_keytis
+- somfy_telis
+- star_line

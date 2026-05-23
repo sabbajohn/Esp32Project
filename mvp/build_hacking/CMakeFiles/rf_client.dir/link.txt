@@ -1,0 +1,1 @@
+/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/rf_client.dir/Users/johnsabba/Projects/Hacking/AnaliseDeVulnerabilidadeRF/Esp32Project/tools/client/src/rf_client.c.o -o rf_client  librf_record.a libsubghz_legacy_bridge.a

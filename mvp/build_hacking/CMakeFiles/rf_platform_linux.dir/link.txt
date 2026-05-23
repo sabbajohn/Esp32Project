@@ -1,0 +1,2 @@
+/usr/bin/ar qc librf_platform_linux.a CMakeFiles/rf_platform_linux.dir/Users/johnsabba/Projects/Hacking/AnaliseDeVulnerabilidadeRF/Esp32Project/platform/linux/src/radio_hal_linux.c.o CMakeFiles/rf_platform_linux.dir/Users/johnsabba/Projects/Hacking/AnaliseDeVulnerabilidadeRF/Esp32Project/platform/linux/src/cc1101_hal_linux.c.o CMakeFiles/rf_platform_linux.dir/Users/johnsabba/Projects/Hacking/AnaliseDeVulnerabilidadeRF/Esp32Project/platform/linux/src/storage_fs.c.o
+/usr/bin/ranlib librf_platform_linux.a

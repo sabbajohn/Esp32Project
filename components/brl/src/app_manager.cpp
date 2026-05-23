@@ -1,4 +1,5 @@
 #include "app_manager.h"
+#include "app_registry.h"
 #include <esp_log.h>
 
 static const char* TAG = "AppManager";
@@ -6,7 +7,7 @@ static const char* TAG = "AppManager";
 namespace brl {
 
 AppManager::AppManager() {
-    EventBus::instance().subscribe("system.low_memory", [this](void*) {
+    EventBus::subscribe("system.low_memory", [this](void*) {
         this->enforceAppLimits();
     });
 }
@@ -22,7 +23,7 @@ bool AppManager::startApp(const char* name) {
         }
         // Move to foreground if running in background
         existing->is_foreground = true;
-        existing->last_active = esp_timer_get_time() / 1000;
+        existing->last_active = esp_log_timestamp();
         existing->app->onResume();
         return true;
     }
@@ -41,16 +42,11 @@ bool AppManager::startApp(const char* name) {
     AppState state;
     state.app = std::move(app);
     state.is_foreground = true;
-    state.last_active = esp_timer_get_time() / 1000;
+    state.last_active = esp_log_timestamp();
 
-    try {
-        state.app->onStart();
-        apps.push_back(std::move(state));
-        return true;
-    } catch (const std::exception& e) {
-        ESP_LOGE(TAG, "Exception in app %s start: %s", name, e.what());
-        return false;
-    }
+    state.app->onStart();
+    apps.push_back(std::move(state));
+    return true;
 }
 
 bool AppManager::suspendApp(const char* name) {
@@ -62,14 +58,9 @@ bool AppManager::suspendApp(const char* name) {
             return true;
         }
 
-        try {
-            app_state->app->onSuspend();
-            app_state->is_foreground = false;
-            return true;
-        } catch (const std::exception& e) {
-            ESP_LOGE(TAG, "Exception in app %s suspend: %s", name, e.what());
-            return false;
-        }
+        app_state->app->onSuspend();
+        app_state->is_foreground = false;
+        return true;
     }
 
     ESP_LOGW(TAG, "App %s not found for suspend", name);
@@ -98,12 +89,8 @@ bool AppManager::enforceAppLimits() {
 
         if (oldest_app) {
             ESP_LOGI(TAG, "Suspending old app %s", oldest_app->app->name());
-            try {
-                oldest_app->app->onSuspend();
-                background_count--;
-            } catch (const std::exception& e) {
-                ESP_LOGE(TAG, "Error suspending app: %s", e.what());
-            }
+            oldest_app->app->onSuspend();
+            background_count--;
         }
     }
 
